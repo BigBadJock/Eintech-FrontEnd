@@ -18,7 +18,6 @@ export class AddCustomerDisplayComponent implements OnInit {
         lastName: ['', Validators.required]
       }
     );
-
    }
 
   ngOnInit(): void {

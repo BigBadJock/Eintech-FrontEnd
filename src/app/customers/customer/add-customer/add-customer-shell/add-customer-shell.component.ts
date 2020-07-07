@@ -22,7 +22,7 @@ export class AddCustomerShellComponent implements OnInit {
     }
     this.entityService.add(customer).subscribe(
       () => {
-        this.router.navigateByUrl('/customer');
+        this.router.navigateByUrl('/customers');
       }
     );
 

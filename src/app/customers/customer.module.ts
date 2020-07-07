@@ -7,6 +7,7 @@ import { CustomerEntityService } from './services/data/customer-entity.service';
 import { CustomerResolver } from './services/data/customer-resolver';
 import { EntityDefinitionService, EntityDataService, EntityMetadataMap } from '@ngrx/data';
 import { compareCustomer } from './services/data/customer';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 const entityMetadata: EntityMetadataMap = {
   Customer: {
@@ -18,7 +19,9 @@ const entityMetadata: EntityMetadataMap = {
   declarations: [],
   imports: [
     CommonModule,
-    CustomerRoutingModule
+    CustomerRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     CustomerHttpService,

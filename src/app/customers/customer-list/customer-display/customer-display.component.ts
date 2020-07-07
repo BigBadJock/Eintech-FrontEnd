@@ -17,7 +17,7 @@ export class CustomerDisplayComponent implements OnInit {
   }
 
   update(customer: Customer) {
-    const modalRef = this.modalService.open(UpdateCustomerModalComponent);
+    const modalRef = this.modalService.open(UpdateCustomerModalComponent, {size:'lg'});
     modalRef.componentInstance.customer = customer;
   }
 
