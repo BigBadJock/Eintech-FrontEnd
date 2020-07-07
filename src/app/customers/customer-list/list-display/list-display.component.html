@@ -1,0 +1,23 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Customer</li>
+  </ol>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <a routerLink="/customer/customer/add" class="btn btn-primary">Add Customer</a>
+    </div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-4" *ngFor="let customer of customer$|async">
+      <app-customer-display [customer]="customer"></app-customer-display>
+    </div>
+  </div>
+
+
+</div>
