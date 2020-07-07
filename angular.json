@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Eintech-FrontEnd"
+    }
+  },
+  "defaultProject": "Eintech-FrontEnd",
+  "cli": {
+    "analytics": false
+  }
 }
