@@ -13,6 +13,7 @@ import { EntityDataModule } from '@ngrx/data';
 import { entityConfig } from './entity-metadata';
 import { HttpClientModule } from '@angular/common/http';
 import { reducers, metaReducers } from './reducers';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,8 @@ import { reducers, metaReducers } from './reducers';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     StoreModule.forRoot({}, {}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     EffectsModule.forRoot([]),
