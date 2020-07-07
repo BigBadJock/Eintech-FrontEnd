@@ -127,6 +127,7 @@
   },
   "defaultProject": "Eintech-FrontEnd",
   "cli": {
+    "defaultCollection": "@ngrx/schematics",
     "analytics": false
   }
 }
