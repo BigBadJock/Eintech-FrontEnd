@@ -66,7 +66,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Eintech-FrontEnd:build"
+            "browserTarget": "Eintech-FrontEnd:build",
+            "proxyConfig": "proxy.json"
           },
           "configurations": {
             "production": {
