@@ -1,7 +1,8 @@
 <div class="card">
   <div class="card-body">
     <h5 class="card-title">{{customer.firstName}} {{customer.lastName}}</h5>
-    <a href="" class="card-link">Update</a>
-    <a href="" class="card-link">Delete</a>
+    <button class="btn btn-primary" (click)="update(customer)">Update</button>
+    <button class="btn btn-danger">Delete</button>
+
   </div>
 </div>

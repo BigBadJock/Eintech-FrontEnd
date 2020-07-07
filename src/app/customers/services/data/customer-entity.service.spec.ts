@@ -4,7 +4,7 @@ import {
 } from '@ngrx/data';
 import { CustomerEntityService } from './customer-entity.service';
 
-describe('CustomerService', () => {
+describe('CustomerEntityService', () => {
   let service: CustomerEntityService;
 
   beforeEach(async () => {
@@ -19,7 +19,7 @@ describe('CustomerService', () => {
   });
 
   beforeEach(() => {
-    service = TestBed.get(CustomerEntityService);
+    service = TestBed.get(CustomerEntityService)
   });
 
   it('should create an instance', () => {

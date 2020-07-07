@@ -4,12 +4,13 @@ import { CommonModule } from '@angular/common';
 import { CustomerRoutingModule } from './Customer-routing.module';
 import { CustomerHttpService } from './services/Customer-http.service';
 import { CustomerEntityService } from './services/data/customer-entity.service';
-import { CustomerResolver } from './services/data/Customer-resolver';
-import { EntityMetadata, EntityDefinitionService, EntityDataService, EntityMetadataMap } from '@ngrx/data';
+import { CustomerResolver } from './services/data/customer-resolver';
+import { EntityDefinitionService, EntityDataService, EntityMetadataMap } from '@ngrx/data';
+import { compareCustomer } from './services/data/customer';
 
 const entityMetadata: EntityMetadataMap = {
   Customer: {
-
+    sortComparer: compareCustomer
   }
 };
 

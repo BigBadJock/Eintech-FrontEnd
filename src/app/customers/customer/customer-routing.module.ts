@@ -6,7 +6,7 @@ const routes: Routes = [
   {
     path: 'add',
     loadChildren: () => import('./add-customer/add-customer.module').then((module) => module.AddCustomerModule),
-  }
+  },
 ];
 
 @NgModule({

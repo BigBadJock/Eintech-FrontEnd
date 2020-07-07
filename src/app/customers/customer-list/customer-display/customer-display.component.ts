@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Customer } from '../../services/data/customer';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { UpdateCustomerModalComponent } from '../../customer/update-customer/update-customer-modal/update-customer-modal.component';
 
 @Component({
   selector: 'app-customer-display',
@@ -9,9 +11,16 @@ import { Customer } from '../../services/data/customer';
 export class CustomerDisplayComponent implements OnInit {
   @Input() customer: Customer;
 
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
   }
+
+  update(customer: Customer) {
+    const modalRef = this.modalService.open(UpdateCustomerModalComponent);
+    modalRef.componentInstance.customer = customer;
+  }
+
+
 
 }
