@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable()
-export class PeopleService extends DefaultDataService<Person> {
+export class PeopleHttpService extends DefaultDataService<Person> {
 
   constructor(http: HttpClient, httpUrlGenerator: HttpUrlGenerator) {
     super('Person', http, httpUrlGenerator);

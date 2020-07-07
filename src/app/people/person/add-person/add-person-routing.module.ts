@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AddPersonShellComponent } from './add-person-shell/add-person-shell.component';
 
 
 const routes: Routes = [
   {
-    path: 'add',
-    loadChildren: () => import('./add-person/add-person.module').then((module) => module.AddPersonModule),
+    path: '',
+    component: AddPersonShellComponent
   }
 ];
 
@@ -13,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PersonRoutingModule { }
+export class AddPersonRoutingModule { }

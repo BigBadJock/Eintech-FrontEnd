@@ -2,16 +2,16 @@ import { TestBed } from '@angular/core/testing';
 import {
   EntityCollectionServiceElementsFactory
 } from '@ngrx/data';
-import { PersonService } from './person.service';
+import { PeopleEntityService } from './people-entity.service';
 
 describe('PersonService', () => {
-  let service: PersonService;
+  let service: PeopleEntityService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       providers: [
         EntityCollectionServiceElementsFactory,
-        PersonService
+        PeopleEntityService
       ]
     });
 
@@ -19,7 +19,7 @@ describe('PersonService', () => {
   });
 
   beforeEach(() => {
-    service = TestBed.get(PersonService);
+    service = TestBed.get(PeopleEntityService);
   });
 
   it('should create an instance', () => {

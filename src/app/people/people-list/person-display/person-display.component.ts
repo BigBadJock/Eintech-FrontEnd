@@ -8,7 +8,7 @@ import { Person } from '../../services/data/person';
 })
 export class PersonDisplayComponent implements OnInit {
   @Input() person: Person;
-  
+
   constructor() { }
 
   ngOnInit(): void {

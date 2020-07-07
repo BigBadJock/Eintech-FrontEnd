@@ -14,6 +14,10 @@ const routes: Routes = [
     resolve: {
       people: PeopleResolver,
     }
+  },
+  {
+    path: 'person',
+    loadChildren: () => import('./person/person.module').then((module) => module.PersonModule),
   }
 ];
 

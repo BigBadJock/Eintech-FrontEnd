@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Person } from '../../services/data/person';
-import { PersonService } from '../../services/data/person.service';
+import { PeopleEntityService } from '../../services/data/people-entity.service';
 
 @Component({
   selector: 'app-list-shell',
@@ -11,8 +11,8 @@ import { PersonService } from '../../services/data/person.service';
 export class ListShellComponent implements OnInit {
   people$: Observable<Person[]>;
 
-  constructor(private personService: PersonService) {
-    this.people$ = personService.entities$;
+  constructor(private entityService: PeopleEntityService) {
+    this.people$ = entityService.entities$;
    }
 
   ngOnInit(): void {

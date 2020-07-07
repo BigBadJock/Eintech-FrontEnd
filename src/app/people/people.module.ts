@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PeopleRoutingModule } from './people-routing.module';
-import { PeopleService } from './services/people.service';
-import { PersonService } from './services/data/person.service';
+import { PeopleHttpService } from './services/people-http.service';
+import { PeopleEntityService } from './services/data/people-entity.service';
 import { PeopleResolver } from './services/data/people-resolver';
 import { EntityMetadata, EntityDefinitionService, EntityDataService, EntityMetadataMap } from '@ngrx/data';
 
@@ -20,8 +20,8 @@ const entityMetadata: EntityMetadataMap = {
     PeopleRoutingModule
   ],
   providers: [
-    PeopleService,
-    PersonService,
+    PeopleHttpService,
+    PeopleEntityService,
     PeopleResolver
   ]
 })
@@ -29,10 +29,10 @@ export class PeopleModule {
   constructor(
     private eds: EntityDefinitionService,
     private entityDataService: EntityDataService,
-    private peopleService: PeopleService,
+    private httpService: PeopleHttpService,
   )
   {
     eds.registerMetadataMap(entityMetadata);
-    entityDataService.registerService('Person', peopleService);
+    entityDataService.registerService('Person', httpService);
   }
  }
