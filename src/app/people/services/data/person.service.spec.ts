@@ -19,7 +19,7 @@ describe('PersonService', () => {
   });
 
   beforeEach(() => {
-    service = TestBed.get(PersonService)
+    service = TestBed.get(PersonService);
   });
 
   it('should create an instance', () => {

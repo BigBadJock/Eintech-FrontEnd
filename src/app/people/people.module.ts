@@ -9,7 +9,7 @@ import { EntityMetadata, EntityDefinitionService, EntityDataService, EntityMetad
 
 const entityMetadata: EntityMetadataMap = {
   Person: {
-    
+
   }
 };
 

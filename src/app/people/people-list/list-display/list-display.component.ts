@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Person } from '../../services/data/person';
 
 @Component({
   selector: 'app-list-display',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-display.component.scss']
 })
 export class ListDisplayComponent implements OnInit {
+  @Input() people$: Observable<Person[]>;
 
   constructor() { }
 
