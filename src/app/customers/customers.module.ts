@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { CustomerRoutingModule } from './Customer-routing.module';
+import { CustomersRoutingModule } from './customers-routing.module';
 import { CustomerHttpService } from './services/Customer-http.service';
 import { CustomerEntityService } from './services/data/customer-entity.service';
 import { CustomerResolver } from './services/data/customer-resolver';
@@ -19,7 +19,7 @@ const entityMetadata: EntityMetadataMap = {
   declarations: [],
   imports: [
     CommonModule,
-    CustomerRoutingModule,
+    CustomersRoutingModule,
     FormsModule,
     ReactiveFormsModule
   ],
@@ -29,7 +29,7 @@ const entityMetadata: EntityMetadataMap = {
     CustomerResolver
   ]
 })
-export class CustomerModule {
+export class CustomersModule {
   constructor(
     private eds: EntityDefinitionService,
     private entityDataService: EntityDataService,
